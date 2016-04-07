@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <title>NASA Environment</title>
+    </head>
+    <body>
+    <script type="text/javascript">
+    window.onload = function(){
+    // heatmap configuration
+        var config = {
+            element: document.getElementById("heatmapArea"),
+            radius: 30,
+            opacity: 50,
+            legend: {
+                position: 'br',
+                title: 'Example Distribution'
+            }
+        };
+        //creates and initializes the heatmap
+        var heatmap = h337.create(config);
+
+        document.getElementById("heatmapArea").onclick = function(e){
+        heatmap.store.addDataPoint(e.layerX, e.layerY, 1);
+        };
+    };
+    </script>
+
+    <div id ="heatmapArea">
+    </div>
+    	<div class="container-fluid">
+    		<header>
+    			<nav> <!-- these need links -->
+    				<a href="#">About</a>
+    				<a href="map2.html">The Map</a>
+    				<!-- <a href="#">Pricing</a> -->
+    				<a href="#">Support</a> 	
+    			</nav>
+
+    			<h1>NASA Environment</h1>
+    			<h3>Learning about your world</h3>
+
+    			<a href="#" class="go">Get Started</a>
+    		</header>
+
+    		<div class="row about">
+    			<div class="col-xs-12">
+    				<h2> ABOUT</h2>
+    					<p>
+    						Our goal at NASA Environment is to make learning about the earth and changes it had endured over time easier. We have been pooling open data from NASA and various other databases over the past months and will continue to do so for the forseeable future to give a visual of how the world has changed over time and where it has changed.
+    					</p>
+    			</div>
+    		</div>
+    		<div class="row">
+    				<div class="col-xs-12 col-md-4">
+    					<div class="icon" id="lightning"></div>
+    						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In massa nulla, luctus et imperdiet sed, vestibulum id metus. Nunc ac consequat augue. Duis a dapibus sapien. Integer eleifend viverra arcu eu ultricies. Nam pellentesque luctus velit, id vulputate nunc viverra et. Sed nec iaculis augue, iaculis venenatis metus. Maecenas at.</p>
+    					
+    				</div>
+    				<div class="col-xs-12 col-md-4">
+    					<div class="icon" id="cloud"></div>
+    						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In massa nulla, luctus et imperdiet sed, vestibulum id metus. Nunc ac consequat augue. Duis a dapibus sapien. Integer eleifend viverra arcu eu ultricies. Nam pellentesque luctus velit, id vulputate nunc viverra et. Sed nec iaculis augue, iaculis venenatis metus. Maecenas at.</p>
+  
+    				</div>
+    				<div class="col-xs-12 col-md-4">
+    					<div class="icon" id="people"></div>
+    						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In massa nulla, luctus et imperdiet sed, vestibulum id metus. Nunc ac consequat augue. Duis a dapibus sapien. Integer eleifend viverra arcu eu ultricies. Nam pellentesque luctus velit, id vulputate nunc viverra et. Sed nec iaculis augue, iaculis venenatis metus. Maecenas at.</p>
+    					c
+    				</div>
+    			</div>
+    	</div>
+    </body>
+</html>
