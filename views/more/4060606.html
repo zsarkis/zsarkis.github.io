@@ -50,7 +50,7 @@ var svg = d3.select("body").append("svg")
     .attr("height", height);
 
 queue()
-    .defer(d3.json, "http://zsarkis.github.io/views/more/us.json")
+    .defer(d3.json, "us.json")
     .defer(d3.tsv, "Workbook1.tsv", function(d) { rateById.set(d.id, +d.rate); })
     .await(ready);
 
