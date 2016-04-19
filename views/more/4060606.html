@@ -24,9 +24,9 @@
 
 </style>
 <body>
-<script src="d3.v3.min.js"></script>
-<script src="queue.v1.min.js"></script>
-<script src="topojson.v1.min.js"></script>
+<script src="d3js.org/d3.v3.min.js"></script>
+<script src="d3js.org/queue.v1.min.js"></script>
+<script src="d3js.org/topojson.v1.min.js"></script>
 <script>
 
 var width = 960,
@@ -50,7 +50,7 @@ var svg = d3.select("body").append("svg")
     .attr("height", height);
 
 queue()
-    .defer(d3.json, "us.json")
+    .defer(d3.json, "zsarkis.github.io/views/more/us.json")
     .defer(d3.tsv, "Workbook1.tsv", function(d) { rateById.set(d.id, +d.rate); })
     .await(ready);
 
