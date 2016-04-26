@@ -27,7 +27,7 @@
       minZoom: 9
     }).addTo(map);
     
-  $.getJSON('http://54.88.151.70/neighborhoods.geojson',function(hoodData){
+  $.getJSON("neighborhoods.geojson",function(hoodData){
     L.geoJson( hoodData, {
       style: function(feature){
         var fillColor,
@@ -46,7 +46,7 @@
     }).addTo(map);
   });
  
-  $.getJSON('http://54.88.151.70/rodents.geojson',function(data){
+  $.getJSON('rodents.geojson",function(data){
     var ratIcon = L.icon({
       iconUrl: 'http://blackbirdpublichouse.com/wp-content/uploads/bird-300x300.png',
       iconSize: [60,50]
